@@ -11,6 +11,8 @@ class ComicController extends Controller
         $comics = Comic::all();
         $itemBlueSection = config('comics.iconBlue');
         
-        return view('prodotti', compact('comics', 'itemBlueSection'));
+        return view('products', compact('comics', 'itemBlueSection'));
     }
+
+
 }
