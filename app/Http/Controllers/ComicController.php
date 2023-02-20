@@ -14,5 +14,13 @@ class ComicController extends Controller
         return view('products', compact('comics', 'itemBlueSection'));
     }
 
+    public function single($id){
+        $comic = Comic::find($id);
 
+        $item = [
+            'item' => $comic
+        ];
+
+        return view('detail_comics', $item);
+    }
 }

@@ -29,20 +29,20 @@ Route::get('/', [PageController::class, 'index'])->name('homepage');
     
 //     return view('products', compact('comics', 'itemBlueSection'));
 // })->name('products');
-
-
-Route::get('/prodotti/{id}', function($id){
-    $comics = config('comics.fumetti');
-    
-    $item = '';
-    foreach($comics as $key => $comic){
-        if($id == $key){
-            $item = $comic;
-        }
-    }
-
-    return view('detail_comics', compact('comics', 'item'));
-
-})->name('detail-comics');
-
 Route::get('/prodotti', [ComicController::class, 'index'])->name('products');
+
+// Route::get('/prodotti/{id}', function($id){
+//     $comics = config('comics.fumetti');
+    
+//     $item = '';
+//     foreach($comics as $key => $comic){
+//         if($id == $key){
+//             $item = $comic;
+//         }
+//     }
+
+//     return view('detail_comics', compact('comics', 'item'));
+
+// })->name('detail-comics');
+
+Route::get('/prodotti/{id}', [ComicController::class, 'single'])->name('detail-comics');

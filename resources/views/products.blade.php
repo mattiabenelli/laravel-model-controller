@@ -3,10 +3,10 @@
 @section('content')
     <div class="main-container">
         <div class="row">
-        @foreach ($comics as $key => $comic)
+        @foreach ($comics as $comic)
             <div class="card">
                 <div class="card-image">
-                    <a href="{{ route('detail-comics', ['id' => $key] ) }}">
+                    <a href="{{ route('detail-comics', ['id' => $comic['id']] ) }}">
                         <img src="{{$comic['thumb']}}" alt="">
                     </a>
                 </div>
