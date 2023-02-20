@@ -1,0 +1,9 @@
+@mixin flex-align {
+    display: flex;
+    align-items: center;
+}
+
+@mixin borderPage {
+    width: 80%;
+    margin: 0 auto;
+}

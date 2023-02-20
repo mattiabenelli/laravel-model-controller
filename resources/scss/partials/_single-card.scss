@@ -1,0 +1,72 @@
+@import '~resources/scss/partials/_mixins.scss';
+@import '~resources/scss/partials/_variables.scss';
+
+.wrapper-single-item {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.blue-section-image {
+    background-color: $DCblue;
+    height: 75px;
+
+    img {
+        height: 250px;
+        transform: translateY(-200px);
+    }
+}
+
+.white-section-description {
+    background-color: white;
+    padding: 40px 0 60px;
+
+    .row-white-section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+
+    .title-comic {
+        text-transform: uppercase;
+        color: #003F5E;
+        font-size: 30px;
+        font-weight: 600;
+    }
+
+    .gap-20 {
+        gap: 0 20px;
+    }
+
+    .left-col {
+        width: 70%;
+    }
+
+    .right-col {
+        width: 30%;
+    }
+
+    .price-button {
+        width: 80%;
+        border-right: 1px solid black;
+        padding: 10px 20px;
+    }
+
+    .green-buttons {
+        background-color: #55BA59;
+        border: 1px solid black;
+    }
+
+    .availability-button {
+        height: 100%;
+        width: calc(100% - 80%);
+        display: flex;
+        justify-content: center;
+    }
+
+    .paragraph-comic {
+        color: $GreyTextColor;
+        font-weight: 500;
+    }
+}

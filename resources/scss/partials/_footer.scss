@@ -1,0 +1,101 @@
+@import '~resources/scss/partials/_mixins.scss';
+@import '~resources/scss/partials/_variables.scss';
+
+footer {
+    .footer-container {
+        @include borderPage;
+    }
+
+    .footer-shop {
+        background-image: url('/resources/img/footer-bg.jpg');
+        background-size: cover;
+    }
+
+    .footer-sx-jumbo {
+        display: flex;
+        width: 30%;
+    }
+
+    .footer-dx-jumbo {
+        img {
+            height: 570px;
+        }
+
+        display: flex;
+        width: 70%;
+        justify-content: flex-end;
+        align-items: center;
+        height: 450px;
+    }
+
+    .footer-col {
+        color: white;
+        padding: 0 20px;
+
+        h4 {
+            padding: 10px 0;
+        }
+
+        ul {
+            list-style: none;
+
+            li {
+                padding: 5px 0;
+                list-style-type: none;
+
+                a {
+                    text-decoration: none;
+                    color: gray
+                }
+            }
+        }
+    }
+
+    .footer-container {
+        @include flex-align;
+        justify-content: space-between;
+    }
+
+    .footer-social {
+        padding: 20px 0;
+        position: relative;
+        z-index: 1;
+        background-color: #303030;
+        height: 100%;
+
+        button {
+            border: 1px solid $DCblue;
+            background-color: transparent;
+            color: white;
+            font-size: 15px;
+            padding: 15px 20px;
+        }
+
+        .row {
+            width: 100%;
+            flex-wrap: nowrap
+        }
+
+        .footer-sx {
+            width: 100%
+        }
+
+        .footer-dx {
+            @include flex-align;
+            justify-content: flex-end;
+            width: 100%;
+
+            .follow {
+                color: $DCblue;
+                font-size: 20px;
+                margin-right: 30px;
+            }
+
+            .icons {
+                display: flex;
+                justify-content: space-evenly;
+                gap: 20px;
+            }
+        }
+    }
+}

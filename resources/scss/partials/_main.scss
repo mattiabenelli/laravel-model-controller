@@ -1,0 +1,57 @@
+@import '~resources/scss/partials/_mixins.scss';
+@import '~resources/scss/partials/_variables.scss';
+
+.main-container {
+    @include borderPage;
+    padding: 20px 0;
+}
+
+.blue-container {
+    @include flex-align;
+    @include borderPage;
+    justify-content: space-between;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+main {
+    background-color: #1C1C1C;
+    color: white;
+    position: relative;
+    z-index: 2;
+}
+
+.card {
+    width: calc(100% / 6 - 40px);
+    text-align: center;
+
+    .card-name {
+        text-decoration: none;
+        color: white;
+    }
+}
+
+.blue-section {
+    background-color: $DCblue;
+    padding: 40px 0;
+    position: relative;
+    z-index: 1;
+
+    .blue-section-links {
+        @include flex-align;
+        color: white;
+
+        img {
+            height: 100px;
+        }
+    }
+
+    .blue-section-links-text {
+        padding-left: 10px;
+    }
+}

@@ -1,0 +1,55 @@
+@import '~resources/scss/partials/_mixins.scss';
+@import '~resources/scss/partials/_variables.scss';
+
+header {
+    background-color: white;
+    position: relative;
+    z-index: 2;
+
+    .jumbo-header {
+        background-image: url('/resources/img/jumbotron.jpg');
+        background-size: cover;
+        height: 400px;
+        width: 100%;
+    }
+
+    nav {
+        display: flex;
+        justify-content: flex-end;
+        height: 100%;
+    }
+
+    ul {
+        list-style: none;
+        height: 100%;
+        @include flex-align
+    }
+
+    li {
+        height: 100%;
+        @include flex-align;
+        border-bottom: 5px solid white;
+
+        a {
+            display: inline-block;
+            margin: 1rem;
+            text-decoration: none;
+            color: $GreyTextColor;
+            transition: border-bottom 0.3s;
+            font-weight: bold;
+        }
+
+        &.active,
+        &:hover {
+            border-bottom: 5px solid $DCblue;
+            color: $DCblue
+        }
+    }
+}
+
+.header-container {
+    @include flex-align;
+    @include borderPage;
+    height: 150px;
+    justify-content: space-between;
+}
