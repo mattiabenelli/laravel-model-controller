@@ -45,4 +45,4 @@ Route::get('/prodotti/{id}', function($id){
 
 })->name('detail-comics');
 
-Route::get('/prodtti', [ComicController::class, 'index'])->name('products');
+Route::get('/prodotti', [ComicController::class, 'index'])->name('products');
