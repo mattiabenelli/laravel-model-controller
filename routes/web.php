@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\controllers\PageController as PageController;
+use App\Http\controllers\ComicController as ComicController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,18 +15,20 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+// Route::get('/', function () {
     
-    return view('home');
-})->name('homepage');
+//     return view('home');
+// })->name('homepage');
+
+Route::get('/', [PageController::class, 'index'])->name('homepage');
 
 
-Route::get('/prodotti', function() {
-    $comics = config('comics.fumetti');
-    $itemBlueSection = config('comics.iconBlue');
+// Route::get('/prodotti', function() {
+//     $comics = config('comics.fumetti');
+//     $itemBlueSection = config('comics.iconBlue');
     
-    return view('products', compact('comics', 'itemBlueSection'));
-})->name('products');
+//     return view('products', compact('comics', 'itemBlueSection'));
+// })->name('products');
 
 
 Route::get('/prodotti/{id}', function($id){
@@ -40,3 +44,5 @@ Route::get('/prodotti/{id}', function($id){
     return view('detail_comics', compact('comics', 'item'));
 
 })->name('detail-comics');
+
+Route::get('/prodtti', [ComicController::class, 'index'])->name('products');
